@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محول العملات - Currency Converter</title>
+
+    <meta property="og:title" content="محول العملات - Currency Converter">
+    <meta property="og:description" content="أداة سهلة وسريعة لتحويل العملات بين الدينار العراقي والدولار واليورو والجنيه الاسترليني.">
+    <meta property="og:image" content="https://i.ibb.co/L5191jS/currency-converter-preview.png">
+    <meta property="og:url" content="https://www.currency-converter.free.nf">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="https://www.flaticon.com/svg/static/icons/svg/2534/2534438.svg" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-coins"></i> محول العملات</h1>
+        </header>
+
+        <form id="converter-form">
+            <div class="form-group">
+                <label for="from_currency">من عملة:</label>
+                <div class="select-container">
+                    <select id="from_currency" name="from_currency">
+                        <option value="USD" selected>USD - الدولار الأمريكي</option>
+                        <option value="IQD">IQD - الدينار العراقي</option>
+                        <option value="EUR">EUR - اليورو</option>
+                        <option value="GBP">GBP - الجنيه الإسترليني</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="swap-container">
+                <button type="button" id="swap-btn"><i class="fas fa-exchange-alt"></i></button>
+            </div>
+
+            <div class="form-group">
+                <label for="to_currency">إلى عملة:</label>
+                <div class="select-container">
+                    <select id="to_currency" name="to_currency">
+                        <option value="IQD">IQD - الدينار العراقي</option>
+                        <option value="USD">USD - الدولار الأمريكي</option>
+                        <option value="EUR">EUR - اليورو</option>
+                        <option value="GBP">GBP - الجنيه الإسترليني</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="amount">المبلغ:</label>
+                <input type="number" id="amount" name="amount" placeholder="أدخل المبلغ هنا" required>
+            </div>
+
+            <button type="submit" id="convert-btn">تحويل <i class="fas fa-arrow-right"></i></button>
+        </form>
+
+        <div id="result" class="result-box">
+            <p>النتيجة ستظهر هنا...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 حقوق النشر. جميع الحقوق محفوظة.</p>
+        <div class="footer-links">
+            <a href="https://www.ali-altaee.free.nf/" id="developer-link" class="dev-link"><i class="fas fa-code"></i> المطور</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
